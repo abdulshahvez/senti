@@ -12,7 +12,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post('http://localhost:5000/api/tweets', { username });
+      const response = await axios.post('https://senti-backend.onrender.com/api/tweets', { username });
       setTweets(response.data);
     } catch (err) {
       setError('Failed to fetch tweets. Please try again.');
